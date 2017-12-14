@@ -6,7 +6,7 @@ class PlayerBar extends Component {
   render() {
     return (
       <Row className="show-grid">
-        <Col md={8} mdOffset={2} xsm={12} className="player-bar">
+        <Col sm={8} smOffset={2} xs={10} xsOffset={1} className="player-bar">
 
           <Row id="player-buttons">
             <Col xs={12}>
@@ -70,7 +70,7 @@ class PlayerBar extends Component {
               <Col xs={6} className="icon ion-volume-high text-right"></Col>
             </Col>
           </Row>
-          
+
         </Col>
       </Row>
     );

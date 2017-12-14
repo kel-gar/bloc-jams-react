@@ -1,0 +1,31 @@
+#song-action-btns {
+  background-color: white;
+  border: none;
+}
+
+.ion-pause, .ion-play, .song-number {
+  border: none;
+  background-color: white;
+  font-size: 2rem;
+  color: rgba(65, 153, 153, 0.8);
+}
+
+#album-title {
+  font-size: 2rem;
+}
+
+.artist {
+  font-size: 1rem;
+}
+
+#release-info {
+  font-size: .75rem;
+}
+
+.song-duration {
+  padding-left: 2rem;
+}
+
+.album-details, .song-list {
+  padding-top: 2rem;
+}
