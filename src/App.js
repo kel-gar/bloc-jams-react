@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Grid>
         <Row className="show-grid">
-          <Col md={12}>
+          <Col xs={12}>
             <header>
               <nav>
                 <Link to='/'>Landing</Link>
@@ -20,7 +20,7 @@ class App extends Component {
               <h1>Bloc Jams</h1>
             </header>
           </Col>
-          <Col md={12}>
+          <Col xs={12}>
             <main>
               <Route exact path="/" component={Landing} />
               <Route path="/library" component={Library} />
