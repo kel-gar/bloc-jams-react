@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums.js';
 import PlayerBar from './PlayerBar';
-import { Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Image, Table } from 'react-bootstrap';
 import '.././styles/Album.css';
 
 class Album extends Component {
@@ -128,8 +128,7 @@ class Album extends Component {
           </Col>
 
           <Col md={4} xs={12} className="song-list">
-            <Col xs={8} xsOffset={2} sm={4} smOffset={4}>
-              <table>
+              <Table responsive>
                 <colgroup>
                   <col id="song-number-column" />
                   <col id="song-title-column" />
@@ -157,8 +156,7 @@ class Album extends Component {
                   </tr>
                 )}
                 </tbody>
-              </table>
-            </Col>
+              </Table>
           </Col>
 
         </Col>

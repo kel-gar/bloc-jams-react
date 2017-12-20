@@ -6,7 +6,7 @@
 .ion-pause, .ion-play, .song-number {
   border: none;
   background-color: white;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: rgba(65, 153, 153, 0.8);
 }
 
@@ -22,10 +22,6 @@
   font-size: .75rem;
 }
 
-.song-duration {
-  padding-left: 2rem;
-}
-
-.album-details, .song-list {
-  padding-top: 2rem;
+.album-cover-art {
+  margin: 0 auto;
 }
