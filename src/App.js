@@ -12,15 +12,12 @@ class App extends Component {
       <Grid>
         <Row className="show-grid">
           <Col xs={12}>
-            <header>
-              <nav>
-                <Link to='/'>Landing</Link>
-                <Link to='/library'>Library</Link>
-              </nav>
-              <h1>Bloc Jams</h1>
-            </header>
+            <nav>
+                <Link to='/' id="nav-landing">Bloc Jams</Link>
+                <Link to='/library' id="nav-library">My Music  <span className="ion-music-note"></span></Link>
+            </nav>
           </Col>
-          <Col xs={12}>
+          <Col xs={12} className="main-content">
             <main>
               <Route exact path="/" component={Landing} />
               <Route path="/library" component={Library} />
