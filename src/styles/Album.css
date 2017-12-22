@@ -1,17 +1,25 @@
+.album-info {
+  padding-bottom: 14rem;
+}
+
 #song-action-btns {
-  background-color: white;
   border: none;
+  background: none;
 }
 
 .ion-pause, .ion-play, .song-number {
   border: none;
-  background-color: white;
+  background: none;
   font-size: 1.75rem;
   color: rgba(65, 153, 153, 0.8);
 }
 
 #album-title {
   font-size: 2rem;
+}
+
+.album-details {
+  color: rgb(101, 95, 95);
 }
 
 .artist {
@@ -24,4 +32,25 @@
 
 .album-cover-art {
   margin: 0 auto;
+}
+
+.table-responsive {
+  font-size: 1rem;
+  border-top: .5rem solid rgba(230, 174, 47, .5);
+  border-left: .75rem solid rgba(255, 108, 108, .5);
+  border-bottom: .75rem solid rgb(255, 108, 108);
+  border-right: .75rem solid rgb(230, 174, 47);
+  background-color: rgba(236, 248, 255, 0.77);;
+}
+
+tr {
+  border-top: .25rem solid rgba(230, 174, 47, .5);
+}
+
+tr:hover {
+  cursor: pointer;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle;
 }

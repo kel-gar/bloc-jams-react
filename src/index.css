@@ -7,6 +7,7 @@ html {
 body {
   font-family: "Varela Round", sans-serif;
   background-color: rgb(195, 227, 243);
+  overflow-y: scroll;
 }
 
 button:focus, input:focus {

@@ -1,6 +1,13 @@
+.navbar-default {
+  background: white;
+  border-top: .15rem solid rgb(101, 95, 95);
+  height: 12rem;
+  padding: 1rem;
+}
+
 .ion-btn {
   border: none;
-  background-color: white;
+  background-color: none;
   font-size: 2.5rem;
   color: rgba(65, 153, 153, 0.8);
 }
@@ -39,4 +46,5 @@
 
 .player-buttons .ion-btn, .ion-btn .ion-play, .ion-btn .ion-pause  {
   font-size: 2.25rem;
+  background: none;
 }
