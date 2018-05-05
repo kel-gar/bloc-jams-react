@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 
 const Album = () => (
@@ -10,4 +7,3 @@ const Album = () => (
 );
 
 export default Album;
->>>>>>> bloc-jams-routing-assignment
