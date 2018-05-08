@@ -5,16 +5,6 @@ class Album extends Component {
   constructor(props) {
     super(props);
 
-class Album extends Component {
-   render() {
-     return (
-       <section className="album">
-         {this.props.match.params.slug} Album will go here
-       </section>
-     );
-   }
- }
-
     const album = albumData.find( album => {
       return album.slug === this.props.match.params.slug
     });
@@ -35,6 +25,15 @@ class Album extends Component {
              <div id="release-info">{this.state.album.releaseInfo}</div>
            </div>
          </section>
+         <table id="song-list">
+           <colgroup>
+             <col id="song-number-column" />
+             <col id="song-title-column" />
+             <col id="song-duration-column" />
+           </colgroup>
+           <tbody>
+           </tbody>
+         </table>
        </section>
      );
    }
