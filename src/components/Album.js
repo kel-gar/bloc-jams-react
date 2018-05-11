@@ -15,7 +15,21 @@ class Album extends Component {
     };
   }
 
-
+convertTime(time) {
+  if (isNaN(time) === true || time === undefined ) {
+    return '--:--';
+  }
+  var minutes = Math.floor(time / 60);
+  var seconds = time - minutes * 60;
+  minutes = minutes.toString();
+   if (seconds < 10) {
+    seconds = Math.floor(seconds.toString());
+    return minutes + ":0" + seconds;
+  } else {
+    seconds = Math.floor(seconds.toString());
+    return minutes + ":" + seconds;
+  }
+}
 
    render() {
      return (
@@ -43,7 +57,7 @@ class Album extends Component {
                 <tr className= "song" key={index}>
                   <td>{index + 1}</td>
                   <td>{song.title}</td>
-                  <td>{song.duration*0.0166667}</td>
+                  <td>{this.convertTime(song.duration)}</td>
                 </tr>
                   )
                 }
