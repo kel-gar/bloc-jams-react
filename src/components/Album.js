@@ -11,25 +11,55 @@ class Album extends Component {
     });
 
     this.state = {
-      album: album
+      album: album,
+      currentSong: album.songs[0],
+      isPlaying: false
     };
+
+    this.audioElement = document.createElement('audio');
+    this.audioElement.src = album.songs[0].audioSrc;
   }
 
-convertTime(time) {
-  if (isNaN(time) === true || time === undefined ) {
-    return '--:--';
-  }
-  var minutes = Math.floor(time / 60);
-  var seconds = time - minutes * 60;
-  minutes = minutes.toString();
-   if (seconds < 10) {
-    seconds = Math.floor(seconds.toString());
-    return minutes + ":0" + seconds;
-  } else {
-    seconds = Math.floor(seconds.toString());
-    return minutes + ":" + seconds;
-  }
-}
+    play() {
+      this.audioElement.play();
+      this.setState({ isPlaying: true });
+    }
+
+    pause() {
+      this.audioElement.pause();
+      this.setState({ isPlaying: false });
+    }
+
+    setSong(song) {
+      this.audioElement.src = song.audioSrc;
+      this.setState({ currentSong: song });
+    }
+
+    handleSongClick(song) {
+      const isSameSong = this.state.currentSong === song;
+      if (this.state.isPlaying && isSameSong) {
+        this.pause();
+      } else {
+        if (!isSameSong) { this.setSong(song); }
+        this.play();
+      }
+    }
+
+    convertTime(time) {
+      if (isNaN(time) === true || time === undefined ) {
+        return '--:--';
+      }
+      var minutes = Math.floor(time / 60);
+      var seconds = time - minutes * 60;
+      minutes = minutes.toString();
+      if (seconds < 10) {
+        seconds = Math.floor(seconds.toString());
+        return minutes + ":0" + seconds;
+      } else {
+        seconds = Math.floor(seconds.toString());
+        return minutes + ":" + seconds;
+      }
+    }
 
    render() {
      return (
@@ -49,15 +79,20 @@ convertTime(time) {
              <col id="song-duration-column" />
            </colgroup>
            <tbody>
-              <th>Track</th>
-              <th>Title</th>
-              <th>Time</th>
-               {
-                 this.state.album.songs.map(( song, index ) =>
-                <tr className= "song" key={index}>
-                  <td>{index + 1}</td>
-                  <td>{song.title}</td>
-                  <td>{this.convertTime(song.duration)}</td>
+            {/* <th>Track</th>
+            <th>Title</th>
+            <th>Time</th> */}
+              {this.state.album.songs.map(( song, index ) =>
+                <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
+                  <td className="song-actions">
+                   <button>
+                     <span className="song-number">{index+1}</span>
+                     <span className="ion-play"></span>
+                     <span className="ion-pause"></span>
+                   </button>
+                 </td>
+                  <td className="song-title">{song.title}</td>
+                  <td className="song-duration">{this.convertTime(song.duration)}</td>
                 </tr>
                   )
                 }
