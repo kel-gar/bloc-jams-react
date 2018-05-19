@@ -1,0 +1,26 @@
+.hero-title, .point {
+  text-align: center;
+  font-family: monospace;
+}
+
+.hero-title {
+  font-family: monospace;
+  margin-top: 6em;
+  margin-bottom: 1.5em;
+}
+
+.point-title {
+  font-family: monospace;
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+.point-description {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.point .custom-icon {
+  font-size: 48px;
+  text-align: center;
+}

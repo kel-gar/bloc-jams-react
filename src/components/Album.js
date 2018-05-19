@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
+import './Album.css';
 
 class Album extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Album extends Component {
 
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
-    this.audioElement.volume= this.state.currentVolume;
+    this.audioElement.volume = this.state.currentVolume;
   }
     componentDidMount() {
       this.eventListeners = {

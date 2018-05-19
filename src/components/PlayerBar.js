@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PlayerBar.css';
 
 class PlayerBar extends Component {
   render() {
@@ -30,7 +31,6 @@ class PlayerBar extends Component {
          </section>
          <section id="volume-control">
            <div className="icon ion-volume-low"></div>
-           {/* <div className="current-volume">{this.props.currentVolume}</div> */}
            <input
              type="range"
              className="volume-bar"
