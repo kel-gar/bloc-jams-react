@@ -1,11 +1,10 @@
 import React from 'react';
 import './Landing.css';
 
-
 const Landing = () => (
   <section className="landing">
-    <h1 className="hero-title">Turn the music up!</h1>
 
+    <h1 className="hero-title">Turn the music up!</h1>
     <section className="selling-points row">
       <div className="point col-md-4">
         <h2 className="point-title">Choose your music</h2>

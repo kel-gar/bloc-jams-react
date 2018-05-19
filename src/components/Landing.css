@@ -5,7 +5,7 @@
 
 .hero-title {
   font-family: monospace;
-  margin-top: 6em;
+  margin-top: 2em;
   margin-bottom: 1.5em;
 }
 
@@ -21,6 +21,6 @@
 }
 
 .point .custom-icon {
-  font-size: 48px;
+  font-size: 40px;
   text-align: center;
 }

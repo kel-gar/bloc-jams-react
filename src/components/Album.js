@@ -4,6 +4,7 @@ import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 import './Album.css';
 
+
 class Album extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +19,10 @@ class Album extends Component {
       currentTime: 0,
       duration: album.songs[0].duration,
       currentVolume: 0.7,
-      isPlaying: false
+      isPlaying: false,
+      isHovered: false,
+      dynamicClass: 'song-number',
+      targetId: 0
     };
 
     this.audioElement = document.createElement('audio');
@@ -64,22 +68,6 @@ class Album extends Component {
       this.setState({ currentSong: song });
     }
 
-    formatTime(time) {
-      if (isNaN(time) === true || time === undefined ) {
-        return '--:--';
-      }
-      var minutes = Math.floor(time / 60);
-      var seconds = time - minutes * 60;
-      minutes = minutes.toString();
-      if (seconds < 10) {
-        seconds = Math.floor(seconds.toString());
-        return minutes + ":0" + seconds;
-      } else {
-        seconds = Math.floor(seconds.toString());
-        return minutes + ":" + seconds;
-      }
-    }
-
     handleSongClick(song) {
       const isSameSong = this.state.currentSong === song;
       if (this.state.isPlaying && isSameSong) {
@@ -118,6 +106,48 @@ class Album extends Component {
       this.setState({ currentVolume: newVolume });
     }
 
+    formatTime(time) {
+      if (isNaN(time) === true || time === undefined ) {
+        return '--:--';
+      }
+      var minutes = Math.floor(time / 60);
+      var seconds = time - minutes * 60;
+      minutes = minutes.toString();
+      if (seconds < 10) {
+        seconds = Math.floor(seconds.toString());
+        return minutes + ":0" + seconds;
+      } else {
+        seconds = Math.floor(seconds.toString());
+        return minutes + ":" + seconds;
+      }
+    }
+
+    mouseEnter(e) {
+      console.log(e.target.id);
+      if (e.target !== this.state.currentSong && !this.state.isPlaying) {
+        this.setState({
+          dynamicClass: 'icon ion-ios-play',
+          targetId: e.target.id
+        });
+      }
+    }
+
+    mouseLeave(e) {
+      console.log(e.target);
+      if (!this.state.currentSong || !this.state.isPlaying) {
+        this.setState({
+          dynamicClass: 'song-number',
+          targetId: e.target.id
+        });
+      }
+      else if (this.state.currentSong) {
+        this.setState({
+          dynamicClass: 'icon ion-ios-pause',
+          targetId: e.target.id
+        })
+      }
+    }
+
 
    render() {
      return (
@@ -141,9 +171,9 @@ class Album extends Component {
                 <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
                   <td className="song-actions">
                    <button>
-                     <span className="song-number">{index+1}</span>
-                     <span className="ion-play"></span>
-                     <span className="ion-pause"></span>
+                     <span className={(this.state.isPlaying && (this.state.currentSong === song)) ?'hidden-number' : 'song-number'}>{index + 1}</span>
+                     <span className={(this.state.isPlaying && (this.state.currentSong === song)) ? 'icon ion-ios-pause' : ''}></span>
+                     <span className={(this.state.isPlaying && (this.state.currentSong === song)) ? '' : 'icon ion-ios-play'}></span>
                    </button>
                  </td>
                   <td className="song-title">{song.title}</td>
