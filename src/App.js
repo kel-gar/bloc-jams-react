@@ -5,16 +5,17 @@ import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
 
-
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header>
-          <nav>
+          <nav1>
             <Link to='/'>Landing</Link>
+          </nav1>
+          <nav2>
             <Link to='/library'>Library</Link>
-          </nav>
+          </nav2>
           <h1>Bloc Jams</h1>
         </header>
         <main>
@@ -26,5 +27,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;

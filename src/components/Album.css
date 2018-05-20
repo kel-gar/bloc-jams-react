@@ -1,11 +1,11 @@
 #album-info {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
 }
 
 #album-cover-art {
-  width: 25%;
-  height: 25%;
+  width: 20%;
+  height: 20%;
   margin-left: 1.5em;
 }
 
@@ -23,6 +23,7 @@
 
 h5 {
   font-family: monospace;
+  color: black;
 }
 
 #song-list {

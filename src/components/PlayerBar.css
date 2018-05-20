@@ -9,7 +9,7 @@
 }
 
 #buttons button span {
-  font-size: 26px;
+  font-size: 20px;
   padding: 0 5px;
 }
 
@@ -20,12 +20,12 @@
 
 #volume-control span {
   width: 20%;
-  display: inline;
+  display: flex;
 }
 
 #volume-control input {
-  width: 70%;
-  display: inline;
+  width: 100%;
+  display: flex;
 }
 
 #volume-control .custom-icon {
@@ -34,7 +34,7 @@
 }
 
 #time-control {
-  width: 75%;
+  width: 60%;
   margin: auto;
 }
 
@@ -45,13 +45,13 @@
 }
 
 .current-time {
-  text-align: left;
+  text-align: center;
   display: inline;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .total-time {
-  text-align: right;
+  text-align: center;
   display: inline;
-  font-size: 1.25em;
+  font-size: 1em;
 }
