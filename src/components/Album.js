@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom'; this was needed at one point but came up in DevTools as error
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 import './Album.css';

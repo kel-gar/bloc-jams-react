@@ -8,7 +8,7 @@ h1 {
   font-size: 50px;
 }
 
-nav1 {
+.Landing {
   padding: 10px;
   background-color: black;
   color: black;
@@ -16,7 +16,7 @@ nav1 {
   font-size: 20px;
 }
 
-nav2 {
+.Library {
   padding: 10px;
   background-color: black;
   color: black;
