@@ -1,4 +1,5 @@
 #album-info {
+  color: white;
   margin-bottom: 10px;
   display: flex;
 }
@@ -16,6 +17,7 @@
 }
 
 #album-title, .artist {
+  color: white;
   margin-top: -5px;
   margin-bottom: .75em;
   font-size: 30px;
@@ -23,15 +25,17 @@
 
 h5 {
   font-family: monospace;
-  color: black;
+  color: white;
 }
 
 #song-list {
+  color: white;
   width: 100%;
 }
 
 
 td {
+  color: white;
   font-family: monospace;
   font-size: 16px;
   border-bottom: 1px solid #333;
@@ -39,27 +43,33 @@ td {
 }
 
 button {
+  color: white;
   background: none;
   border: none;
   font-size: 14px;
 }
 
 .song-title, .song-duration, {
+  color: white;
   font-size: 1.15em;
 }
 
 .song-actions button:hover .song-number {
+  color: white;
   display: none;
 }
 
 .song-actions button .ion-ios-play {
+  color: white;
   display: none;
 }
 
 .song-actions button:hover .ion-ios-play{
+  color: white;
   display: block;
 }
 
 .hidden-number {
+  color: white;
   display: none;
 }

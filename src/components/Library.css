@@ -1,10 +1,11 @@
 .library {
+  color: white;
   margin: 5em;
   text-align: center;
 }
 
 div {
-  color: black;
+  color: white;
   font-style: monospace;
   font-size: 16px;
 }
